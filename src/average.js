@@ -14,29 +14,25 @@
 
 const averageArray = (array) => {
   let sum = 0;
-  for(let index = 0; index < array.length; index += 1) {
-    if (typeof(array[index]) !== 'number') {
+  for (let index = 0; index < array.length; index += 1) {
+    if (typeof (array[index]) !== 'number') {
       return undefined;
-    } else if (array[index] === 0) {
+    } if (array[index] === 0) {
       return 0;
-    } else {
+    } 
       sum += array[index];
-      
-    }
-    return sum;
   }
-}
+  return sum;
+};
 
 const average = (array) => {
   let average = 0;
   let sum = 0;
-  if (array.length === 0) {
-    return undefined;
-  }
   sum = averageArray(array);
+  if (array.length === 0 || typeof(sum) !== 'number') return undefined;
   average = sum / array.length;
   return Math.round(average);
 };
 
-console.log(average([1, 4, '5']))
+console.log(average([3, 4, 5]));
 module.exports = average;
