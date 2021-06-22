@@ -26,11 +26,11 @@ const averageArray = (array) => {
 };
 
 const average = (array) => {
-  let average = 0;
+  let averageNum = 0;
   let sum = 0;
   sum = averageArray(array);
-  if (array.length === 0 || typeof(sum) !== 'number') return undefined;
-  average = sum / array.length;
+  if (array.length === 0 || typeof sum !== 'number') return undefined;
+  averageNum = sum / array.length;
   return Math.round(average);
 };
 
