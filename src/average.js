@@ -12,28 +12,23 @@
     - average([1, '2']) // Retorno: undefined;
 */
 
+
 const average = (array) => {
   let sum = 0;
   let average = 0;
-  if (array.length === 0 || array[0] === ' ') {
+  if (array.length === 0) {
     return undefined
   } else {
     for(let index = 0; index < array.length; index += 1) {
       if (typeof(array[index]) !== 'number') {
         return undefined
-    }
-      if (array[index] === 0) {
+      } else if (array[index] === 0) {
         return 0;
     }
       sum += array[index];
   }
   average = sum / array.length;
-  if (Number.isInteger(average) === false) {
-    let averageCeil = Math.round(average)
-    return averageCeil
-  } else {
-    return average;
-  }
+    return Math.round(average);
   }
 };
 
