@@ -27,12 +27,10 @@ const averageArray = (array) => {
 
 const average = (array) => {
   let averageNum = 0;
-  let sum = 0;
-  sum = averageArray(array);
-  if (array.length === 0 || typeof sum !== 'number') return undefined;
+  let sum = averageArray(array);
+  if (array.length === 0 || typeof (sum) !== 'number') return undefined;
   averageNum = sum / array.length;
-  return Math.round(average);
+  return Math.round(averageNum);
 };
 
-console.log(average([3, 4, 5]));
 module.exports = average;
