@@ -23,5 +23,4 @@ const createStudent = (name, feedback) => {
  return object;  
 };
 
-console.log(createStudent('Leandro', 'O lobo solitário'))
 module.exports = createStudent;
