@@ -39,12 +39,12 @@ describe('4 - Implemente os casos de teste para a função `circle`', () => {
 
     for (let key in circle3) {
       if (Number.isInteger(circle3[key]) === false) {
-        let numPrecision = parseInt(circle3[key].toPrecision(4));
+        let numPrecision = parseFloat(circle3[key].toPrecision(4));
         circle3[key] = numPrecision
       }
     }
 
-    assert.strictEqual(Object.values(circle3(3))[1], 28.26)
+    assert.deepStrictEqual(Object.values(circle3)[1], 28.26)
     // Teste que a função retorna, num objeto, os dados corretos de um círculo de raio 3.
     assert.deepStrictEqual(circle3, {radius: 3, area: 28.26, circumference: 18.84})
   });
