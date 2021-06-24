@@ -83,5 +83,4 @@ const createMenu = (menu) => {
 
 };
 
-console.log(meuRestaurante)
 module.exports = createMenu;
